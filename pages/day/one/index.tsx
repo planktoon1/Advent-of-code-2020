@@ -18,21 +18,17 @@ const one = () => {
       <div className={styles.container}>
         <main className={styles.main}>
           <p className={styles.description}>
-            <button>
-              <a
-                href="https://adventofcode.com/2020/day/1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Puzzle
-              </a>
-            </button>
+            <a
+              href="https://adventofcode.com/2020/day/1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Puzzle</button>
+            </a>
 
-            <button>
-              <Link href="/puzzle-input/d1p1.txt">
-                <a>Input.txt</a>
-              </Link>
-            </button>
+            <Link href="/puzzle-input/d1p1.txt">
+              <button>Input.txt</button>
+            </Link>
           </p>
           <div>
             <div className={styles.code}>{sortFunction_text}</div>

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Advent of Code</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,11 +23,9 @@ export default function Home() {
             Frederik Østergaard
           </a>
         </p>
-        <button>
-          <Link href="/day/one">
-            <a>Day 1</a>
-          </Link>
-        </button>
+        <Link href="/day/one">
+          <button>Day 1</button>
+        </Link>
       </main>
 
       <footer className={styles.footer}>
