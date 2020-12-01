@@ -1,13 +1,16 @@
 import styles from "../../../styles/Home.module.css";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import {
+  d1p1_functionAsText,
+  d1p2_functionAsText,
+  solvePuzzle,
+} from "./functions";
 
 const one = () => {
   useEffect(() => {
-    solvePuzzle();
+    solvePuzzle(sortedInput);
   }, [input]);
-  const d1p11SolutionAstext = "" + solvePuzzle;
-  const d1p2SolutionAstext = "" + solvePuzzlePart2;
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -33,11 +36,11 @@ const one = () => {
         <div>
           <p className={styles.description}>Part 1:</p>
           <div className={styles.code}>
-            <pre>{d1p11SolutionAstext}</pre>
+            <pre>{d1p1_functionAsText}</pre>
           </div>
           <p className={styles.description}>Part 2:</p>
           <div className={styles.code}>
-            <pre>{d1p2SolutionAstext}</pre>
+            <pre>{d1p2_functionAsText}</pre>
           </div>
         </div>
       </main>
@@ -250,55 +253,3 @@ const sortedInput = input
   .map(Number)
   .sort((a, b) => a - b);
 export default one;
-
-const solvePuzzle = () => {
-  let i = 0;
-  let j = 1;
-  let currSum = undefined;
-  do {
-    const [val1, val2] = [sortedInput[i], sortedInput[j]];
-    currSum = val1 + val2;
-
-    if (currSum === 2020) {
-      console.log(`${val1} + ${val2} = 2020`);
-      console.log(`${val1} * ${val2} = ${val1 * val2}!`);
-      break;
-    } else if (currSum > 2020) {
-      i++;
-      j = i + 1;
-    } else {
-      j++;
-    }
-  } while (true);
-};
-const solvePuzzlePart2 = () => {
-  let i = 0;
-  let j = 1;
-  let y = 2;
-  let currSum = undefined;
-  do {
-    const [val1, val2, val3] = [sortedInput[i], sortedInput[j], sortedInput[y]];
-    currSum = val1 + val2 + val3;
-
-    if (currSum === 2020) {
-      console.log(`${val1} + ${val2} + ${val3} = 2020`);
-      console.log(`${val1} * ${val2} * ${val3} = ${val1 * val2 * val3}!`);
-      break;
-    } else if (currSum > 2020) {
-      j++;
-      y = j + 1;
-      const [val1, val2, val3] = [
-        sortedInput[i],
-        sortedInput[j],
-        sortedInput[y],
-      ];
-      if (val1 + val2 + val3 > 2020) {
-        i++;
-        j = i + 1;
-        y = i + 2;
-      }
-    } else {
-      y++;
-    }
-  } while (true);
-};
