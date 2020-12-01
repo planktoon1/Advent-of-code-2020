@@ -5,7 +5,7 @@ import {
   d1p1_functionAsText,
   d1p2_functionAsText,
   solvePuzzle,
-} from "./functions";
+} from "../../../functions/d1/functions";
 
 const one = () => {
   useEffect(() => {
