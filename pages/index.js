@@ -23,10 +23,11 @@ export default function Home() {
             Frederik Østergaard
           </a>
         </p>
-
-        <Link href="/day/one">
-          <a>Day 1</a>
-        </Link>
+        <button>
+          <Link href="/day/one">
+            <a>Day 1</a>
+          </Link>
+        </button>
       </main>
 
       <footer className={styles.footer}>

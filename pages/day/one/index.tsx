@@ -6,45 +6,48 @@ import {
   d1p2_functionAsText,
   solvePuzzle,
 } from "../../../functions/d1/functions";
+import Header from "../../../components/header";
 
 const one = () => {
   useEffect(() => {
     solvePuzzle(sortedInput);
   }, [input]);
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1>--- Day 1: Report Repair ---</h1>
+    <>
+      <Header pageTitle="Day 1: Report Repair"></Header>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <p className={styles.description}>
+            <button>
+              <a
+                href="https://adventofcode.com/2020/day/1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Puzzle
+              </a>
+            </button>
 
-        <p className={styles.description}>
-          <button>
-            <a
-              href="https://adventofcode.com/2020/day/1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Puzzle
-            </a>
-          </button>
-          <br />
-          <button>
-            <Link href="/puzzle-input/d1p1.txt">
-              <a>Input.txt</a>
-            </Link>
-          </button>
-        </p>
-        <div>
-          <p className={styles.description}>Part 1:</p>
-          <div className={styles.code}>
-            <pre>{d1p1_functionAsText}</pre>
+            <button>
+              <Link href="/puzzle-input/d1p1.txt">
+                <a>Input.txt</a>
+              </Link>
+            </button>
+          </p>
+          <div>
+            <div className={styles.code}>{sortFunction_text}</div>
+            <p className={styles.description}>Part 1:</p>
+            <div className={styles.code}>
+              <pre>{d1p1_functionAsText}</pre>
+            </div>
+            <p className={styles.description}>Part 2:</p>
+            <div className={styles.code}>
+              <pre>{d1p2_functionAsText}</pre>
+            </div>
           </div>
-          <p className={styles.description}>Part 2:</p>
-          <div className={styles.code}>
-            <pre>{d1p2_functionAsText}</pre>
-          </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 };
 
@@ -253,3 +256,5 @@ const sortedInput = input
   .map(Number)
   .sort((a, b) => a - b);
 export default one;
+
+const sortFunction_text = `const sortedInput = input.split("\\n").map(Number).sort((a, b) => a - b);`;
