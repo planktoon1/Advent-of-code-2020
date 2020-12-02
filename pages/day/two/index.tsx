@@ -59,7 +59,7 @@ const two = () => {
             </a>
 
             <Link href="/puzzle-input/d2p1.html">
-              <button>Input.txt</button>
+              <button>Input.html</button>
             </Link>
           </p>
           <div>
