@@ -9,18 +9,18 @@ export const solvePuzzle = (input: string, SLOPE_X, SLOPE_Y) => {
 
   let [x, y] = [0, 0];
   let trees = 0;
-  while (y < height - 1) {
-    x += SLOPE_X;
-    y += SLOPE_Y;
+  while (y < height) {
     const pos = map[y][x % width];
     if (pos === "#") {
       trees++;
     }
+    x += SLOPE_X;
+    y += SLOPE_Y;
   }
   return trees;
 };
 
-export const d3_functionAsText = `solvePuzzle = (input: string, SLOPE_X, SLOPE_Y) => {
+export const d3_functionAsText = `const solvePuzzle = (input: string, SLOPE_X, SLOPE_Y) => {
     // flipped coordinate system (y, x)
     const map = input
       .trim()
@@ -31,13 +31,13 @@ export const d3_functionAsText = `solvePuzzle = (input: string, SLOPE_X, SLOPE_Y
   
     let [x, y] = [0, 0];
     let trees = 0;
-    while (y < height - 1) {
-      x += SLOPE_X;
-      y += SLOPE_Y;
+    while (y < height) {
       const pos = map[y][x % width];
       if (pos === "#") {
         trees++;
       }
+      x += SLOPE_X;
+      y += SLOPE_Y;
     }
     return trees;
   };`;

@@ -6,10 +6,16 @@ import {
   d1p2_functionAsText,
 } from "../../../functions/d1/functions";
 import Header from "../../../components/header";
-import { d3p2_text, d3_functionAsText } from "../../../functions/d3Functions";
+import {
+  d3p2_text,
+  d3_functionAsText,
+  solvePuzzle,
+} from "../../../functions/d3Functions";
 
 const three = () => {
-  useEffect(() => {}, [input]);
+  useEffect(() => {
+    console.log(solvePuzzle(input, 1, 2));
+  }, [input]);
   return (
     <>
       <Header pageTitle="Day 3: Toboggan Trajectory"></Header>
