@@ -1,11 +1,15 @@
-import styles from "../../../styles/Home.module.css";
-import React, { useEffect } from "react";
 import Link from "next/link";
+import React, { useEffect } from "react";
 import Header from "../../../components/header";
 import {
   puzzle1_asText,
   puzzlePart2_asText,
+  solvePuzzlePart2,
+  v2_solvePart1,
+  v2_solvePart2,
+  v2_transformInput,
 } from "../../../functions/d4Functions";
+import styles from "../../../styles/Home.module.css";
 
 const four = () => {
   useEffect(() => {}, [input]);
@@ -29,19 +33,32 @@ const four = () => {
           </p>
           <div>
             <div style={{ textAlign: "center" }}></div>
-            <p style={{ textAlign: "center" }}>
-              What a mess 🙆‍♂️ <br />
-              (Hopefully i will find willpower to come back and clean it up
-              later)
-            </p>
+            <div className={styles.code}>
+              <pre>{v2_transformInput}</pre>
+            </div>
             <p className={styles.description}>Part 1:</p>
             <div className={styles.code}>
-              <pre>{puzzle1_asText}</pre>
+              <pre>{v2_solvePart1}</pre>
             </div>
             <p className={styles.description}>Part 2:</p>
             <div className={styles.code}>
-              <pre>{puzzlePart2_asText}</pre>
+              <pre>{v2_solvePart2}</pre>
             </div>
+          </div>
+          <div style={{ textAlign: "center" }}></div>
+          <p style={{ textAlign: "center" }}>
+            _____________________________________________________________________________________
+          </p>
+          <p style={{ textAlign: "center", fontWeight: "bold" }}>
+            Original code used for submission
+          </p>
+          <p className={styles.description}>Part 1:</p>
+          <div className={styles.code}>
+            <pre>{puzzle1_asText}</pre>
+          </div>
+          <p className={styles.description}>Part 2:</p>
+          <div className={styles.code}>
+            <pre>{puzzlePart2_asText}</pre>
           </div>
         </main>
       </div>
