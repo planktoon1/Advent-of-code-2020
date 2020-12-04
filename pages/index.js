@@ -32,6 +32,9 @@ export default function Home() {
         <Link href="/day/three">
           <button>Day 3</button>
         </Link>
+        <Link href="/day/four">
+          <button>Day 4</button>
+        </Link>
       </main>
 
       <footer className={styles.footer}>
