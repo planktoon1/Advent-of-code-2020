@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   d1p1_functionAsText,
   d1p2_functionAsText,
-} from "../../../functions/d1/functions";
+} from "../../../functions/d1functions";
 import Header from "../../../components/header";
 import {
   d3p2_text,

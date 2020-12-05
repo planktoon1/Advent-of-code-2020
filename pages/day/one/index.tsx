@@ -5,7 +5,7 @@ import {
   d1p1_functionAsText,
   d1p2_functionAsText,
   solvePuzzle,
-} from "../../../functions/d1/functions";
+} from "../../../functions/d1functions";
 import Header from "../../../components/header";
 
 const one = () => {
