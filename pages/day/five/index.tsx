@@ -1,13 +1,15 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Header from "../../../components/header";
-import { solvePart1, solvePart2 } from "../../../functions/d5Functions";
+import {
+  d5p1_text,
+  d5p2_text,
+  getRange_text,
+} from "../../../functions/d5Functions";
 import styles from "../../../styles/Home.module.css";
 
 const five = () => {
-  useEffect(() => {
-    console.log(solvePart2(input));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 5: Binary Boarding"></Header>
@@ -29,15 +31,15 @@ const five = () => {
           <div>
             <div style={{ textAlign: "center" }}></div>
             <div className={styles.code}>
-              <pre>{"a"}</pre>
+              <pre>{getRange_text}</pre>
             </div>
             <p className={styles.description}>Part 1:</p>
             <div className={styles.code}>
-              <pre>{"d"}</pre>
+              <pre>{d5p1_text}</pre>
             </div>
             <p className={styles.description}>Part 2:</p>
             <div className={styles.code}>
-              <pre>{""}</pre>
+              <pre>{d5p2_text}</pre>
             </div>
           </div>
           <div style={{ textAlign: "center" }}></div>

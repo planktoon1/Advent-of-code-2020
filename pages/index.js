@@ -23,18 +23,33 @@ export default function Home() {
             Frederik Østergaard
           </a>
         </p>
-        <Link href="/day/one">
-          <button>Day 1</button>
-        </Link>
-        <Link href="/day/two">
-          <button>Day 2</button>
-        </Link>
-        <Link href="/day/three">
-          <button>Day 3</button>
-        </Link>
-        <Link href="/day/four">
-          <button>Day 4</button>
-        </Link>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            maxWidth: "20rem",
+            justifyContent: "center",
+          }}
+        >
+          <Link href="/day/one">
+            <button>Day 1</button>
+          </Link>
+          <Link href="/day/two">
+            <button>Day 2</button>
+          </Link>
+          <Link href="/day/three">
+            <button>Day 3</button>
+          </Link>
+          <Link href="/day/four">
+            <button>Day 4</button>
+          </Link>
+          <Link href="/day/five">
+            <button>Day 5</button>
+          </Link>
+          <Link href="/day/six">
+            <button>Day 6</button>
+          </Link>
+        </div>
       </main>
 
       <footer className={styles.footer}>
