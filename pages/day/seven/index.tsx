@@ -1,13 +1,11 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Header from "../../../components/header";
-import { d7_text, solve } from "../../../functions/d7Functions";
+import { d7_text } from "../../../functions/d7Functions";
 import styles from "../../../styles/Home.module.css";
 
 const seven = () => {
-  useEffect(() => {
-    console.log(solve(input));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 7: Handy Haversacks"></Header>

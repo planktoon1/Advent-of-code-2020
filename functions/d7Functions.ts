@@ -88,7 +88,7 @@ export const d7_text = `interface BagNode {
     containedBy: {},
   });
   
-  export const solvePart1 = (input: string) => {
+  export const solveDay7 = (input: string) => {
     // Create bag graph
     const lines = input.split("\\n");
     const bags: { [bagName: string]: BagNode } = {};
