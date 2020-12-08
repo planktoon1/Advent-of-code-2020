@@ -5,16 +5,11 @@ import {
   d8p1_text,
   d8p2_text,
   d8_checkIfInf_text,
-  d8_text,
-  solveD8Part1,
-  solveD8Part2,
 } from "../../../functions/d8Functions";
 import styles from "../../../styles/Home.module.css";
 
 const seven = () => {
-  useEffect(() => {
-    console.log(solveD8Part1(input));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 8: Handheld Halting"></Header>
