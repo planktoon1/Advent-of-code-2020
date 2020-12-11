@@ -10,9 +10,7 @@ import {
 import styles from "../../../styles/Home.module.css";
 
 const nine = () => {
-  useEffect(() => {
-    console.log(solveD9Part2(input, 167829540));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 9: Encoding Error"></Header>

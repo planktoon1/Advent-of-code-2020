@@ -9,9 +9,7 @@ import {
 import Header from "../../../components/header";
 
 const one = () => {
-  useEffect(() => {
-    solvePuzzle(sortedInput);
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 1: Report Repair"></Header>

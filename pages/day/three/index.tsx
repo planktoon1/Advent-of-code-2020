@@ -13,9 +13,7 @@ import {
 } from "../../../functions/d3Functions";
 
 const three = () => {
-  useEffect(() => {
-    console.log(solvePuzzle(input, 1, 2));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 3: Toboggan Trajectory"></Header>

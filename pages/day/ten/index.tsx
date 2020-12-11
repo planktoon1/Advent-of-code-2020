@@ -10,9 +10,7 @@ import {
 import styles from "../../../styles/Home.module.css";
 
 const ten = () => {
-  useEffect(() => {
-    console.log(solveD10Part2(input));
-  }, [input]);
+  useEffect(() => {}, [input]);
   return (
     <>
       <Header pageTitle="Day 10: Adapter Array"></Header>
