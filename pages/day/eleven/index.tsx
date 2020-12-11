@@ -1,5 +1,52 @@
-<pre style="word-wrap: break-word; white-space: pre-wrap">
-LLLLLL.LLLL..LLLLLL.LLLLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLL.LLLLL.LLLLLL.L.LL.LLLLLL.LLLLLLLLLLLLLLLL
+import styles from "../../../styles/Home.module.css";
+import React, { useEffect } from "react";
+import Link from "next/link";
+
+import Header from "../../../components/header";
+import {
+  d11p1_text,
+  d11p2_text,
+  solveD11Part1,
+  solveD11Part2,
+} from "../../../functions/d11Functions";
+
+const eleven = () => {
+  useEffect(() => {}, [input]);
+  return (
+    <>
+      <Header pageTitle="Day 11: Seating System"></Header>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <p className={styles.description}>
+            <a
+              href="https://adventofcode.com/2020/day/11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Puzzle</button>
+            </a>
+
+            <Link href="/puzzle-input/d11.html">
+              <button>Input.txt</button>
+            </Link>
+          </p>
+          <div>
+            <p className={styles.description}>Part 1:</p>
+            <div className={styles.code}>
+              <pre>{d11p1_text}</pre>
+            </div>
+            <p className={styles.description}>Part 2:</p>
+            <div className={styles.code}>
+              <pre>{d11p2_text}</pre>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+
+const input = `LLLLLL.LLLL..LLLLLL.LLLLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLL.LLLLL.LLLLLL.L.LL.LLLLLL.LLLLLLLLLLLLLLLL
 LLLLLL.LLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLL.LLL.LLLL.L.LLLLLL.LLLLLLLLLLLL.LLLLLLLL
 LLLLLLLL.LLL.LL..LLLLLLLLL.L.LLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLL
 LLLLLL.LLLLL.LLL.LLLLLLLLL.LLLLLLLLLLL.LL.LLLLLL.LLLLLLLL.LLLLLLLLLLLL.LLLLLLLLLLL.LLLLLLLLL.LLLLLL
@@ -88,5 +135,6 @@ LLLLLL.LLLLLLLLL.LLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLL.LLLLLL.LLLL.LLLL
 LLLLLL.LLLLLLLLL.LL.LLLLLLLLLLLLLLL..LLLL.LLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLL
 LLLLLL.LLLLLLL.L.L.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLL.LL.LLLLL.LLLLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLL
 LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL..LLLLLLLLLL.LLL.LLLL..LLLLL.LLLLLLL.LL.LLLLL
-LLLLLLLLLLLLLLLL.LLLL.LLLL.LLLLLLL.LLLLLL.LLLLLLLLLLLLLLL.LLLLL.LLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL
-</pre>
+LLLLLLLLLLLLLLLL.LLLL.LLLL.LLLLLLL.LLLLLL.LLLLLLLLLLLLLLL.LLLLL.LLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL`;
+
+export default eleven;
