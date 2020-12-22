@@ -1,5 +1,52 @@
-<pre style="word-wrap: break-word; white-space: pre-wrap">
-F12
+import Link from "next/link";
+import React, { useEffect } from "react";
+import Header from "../../../components/header";
+import { d12p1_text, d12p2_text } from "../../../functions/d12Functions";
+import styles from "../../../styles/Home.module.css";
+
+const twelve = () => {
+  useEffect(() => {}, [input]);
+  return (
+    <>
+      <Header pageTitle="Day 12: Rain Risk"></Header>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <p className={styles.description}>
+            <a
+              href="https://adventofcode.com/2020/day/12"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Puzzle</button>
+            </a>
+
+            <Link href="/puzzle-input/d12.html">
+              <button>Input.html</button>
+            </Link>
+          </p>
+          <div>
+            <p className={styles.description}>Part 1:</p>
+            <div className={styles.code}>
+              <pre>{d12p1_text}</pre>
+            </div>
+            <p className={styles.description}>Part 2:</p>
+            <div className={styles.code}>
+              <pre>{d12p2_text}</pre>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+
+const testInput = `F10
+N3
+F7
+R90
+F11`;
+
+const input = `F12
 W1
 N3
 E3
@@ -786,5 +833,6 @@ S4
 W3
 F3
 E5
-F54
-</pre>
+F54`;
+
+export default twelve;
